@@ -4,62 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maze Solver - DFS Algorithm Visualization ✨</title>
-    <meta name="description" content="Interactive visualization of Depth-First Search algorithm solving maze puzzles">
+    <title>Maze Solver - DFS Algorithm</title>
+    <meta name="description" content="Maze solver using Depth-First Search algorithm">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>🧩 Maze Solver - DFS Algorithm</h1>
-        <p>Visualizing the Depth-First Search algorithm solving complex mazes</p>
+        <h1>Maze Solver - DFS Algorithm</h1>
+        <p>Visual demonstration of Depth-First Search pathfinding</p>
 
         <div class="controls">
             <div class="control-group">
-                <label for="maze-select">🗺️ Maze:</label>
+                <label for="maze-select">Select Maze:</label>
                 <select id="maze-select">
-                    <option value="maze1">Sample Maze 1</option>
-                    <option value="maze3">Sample Maze 3</option>
+                    <option value="maze1">Maze 1</option>
+                    <option value="maze3">Maze 2</option>
                 </select>
             </div>
 
             <div class="control-group">
-                <label for="speed-control">⚡ Speed:</label>
+                <label for="speed-control">Speed:</label>
                 <input type="range" id="speed-control" min="1" max="100" value="50">
                 <span id="speed-value">75ms</span>
             </div>
 
-            <button id="start-btn">▶️ Start Solving</button>
-            <button id="reset-btn">🔄 Reset</button>
+            <button id="start-btn">Start</button>
+            <button id="reset-btn">Reset</button>
         </div>
 
         <div class="legend">
             <div class="legend-item">
-                <div class="legend-color" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);"></div>
+                <div class="legend-color" style="background: #4ecca3;"></div>
                 <span>Start</span>
             </div>
             <div class="legend-item">
-                <div class="legend-color" style="background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);"></div>
+                <div class="legend-color" style="background: #e94560;"></div>
                 <span>End</span>
             </div>
             <div class="legend-item">
-                <div class="legend-color" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                <div class="legend-color" style="background: #5b9bd5;"></div>
                 <span>Current Path</span>
             </div>
             <div class="legend-item">
-                <div class="legend-color"
-                    style="background: linear-gradient(135deg, rgba(100, 100, 130, 0.4) 0%, rgba(80, 80, 110, 0.4) 100%);">
-                </div>
+                <div class="legend-color" style="background: #b8b8c8;"></div>
                 <span>Visited</span>
             </div>
             <div class="legend-item">
-                <div class="legend-color"
-                    style="background: linear-gradient(135deg, rgba(255, 107, 107, 0.5) 0%, rgba(255, 82, 82, 0.5) 100%);">
-                </div>
+                <div class="legend-color" style="background: #f5a3b3;"></div>
                 <span>Dead End</span>
             </div>
             <div class="legend-item">
-                <div class="legend-color" style="background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);"></div>
+                <div class="legend-color" style="background: #2d2d44;"></div>
                 <span>Wall</span>
             </div>
         </div>
@@ -67,7 +63,7 @@
         <div id="maze-container"></div>
 
         <div id="stats">
-            <p>💀 Dead Ends (Hits): <span id="hit-count">0</span></p>
+            <p>Dead Ends: <span id="hit-count">0</span></p>
         </div>
     </div>
 
